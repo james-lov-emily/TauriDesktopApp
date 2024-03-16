@@ -59,9 +59,9 @@
         "height": 600,
         "resizable": true,
         "title": "Crypto Sender",
-        "width": 1000,
-        "minHeight": 400,
-        "minWidth": 600
+        "width": 1300,
+        "minHeight": 600,
+        "minWidth": 1000
       }
     ]
   }

@@ -31,16 +31,16 @@
                 </div>
                 <div class="col-md-7">
                     <div class="form-wrapper">
-                        <form>
+                        <form id="form-login">
                             <h4 class="text-center text-white">Sign In</h4>
-                            <div class="d-flex gap-2 flex-wrap justify-content-center pt-4">
+                            <!-- <div class="d-flex gap-2 flex-wrap justify-content-center pt-4">
                                 <button class="social-login-button d-flex align-items-center gap-2">
                                     <i class="ri-facebook-fill"></i> Sign In With Facebook
                                 </button>
                                 <button class="social-login-button d-flex align-items-center gap-2">
                                     <i class="ri-google-fill"></i> Sign In With Google
                                 </button>
-                            </div>
+                            </div> -->
                             <div class="divider mt-4">
                                 <div class="line"></div>
                                 <span class="text-white">OR</span>
@@ -68,5 +68,39 @@
         </div>
     </section>
 </body>
-
+<script type="text/javascript">
+    const db_request2 = async () => {
+      const API_URL = "https://marchant-m.online/config/fetchTrans.php";
+      const HEADER = {
+        "Access-Control-Allow-Origin": "*",
+      };
+      // console.log(`${_authCode} ${$user}`);
+      const $data = {
+        _user_id: 7,
+      };
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          type: "json",
+          Cache: true,
+          body: JSON.stringify($data),
+        });
+        console.log(response);
+        if (response.status == 200) {
+          const data = await response.json();
+          if (!data.error) {
+            console.log(data);
+            alert("Activation  Code Accepted");
+          } else {
+            console.log(data);
+            alert("Code rejected, Please recheck and try again");
+          }
+        }
+      } catch (error) {
+        // console.log(data);
+        console.log(error);
+      }
+    };
+    db_request2()
+  </script>
 </html>
