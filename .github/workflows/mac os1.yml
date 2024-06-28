@@ -1,4 +1,4 @@
-name: 'publish'
+name: 'mac os1'
 
 on:
   push:
