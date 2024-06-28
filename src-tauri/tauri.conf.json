@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev.v1",
+      "identifier": "com.tauri.dev.windows",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
