@@ -1,10 +1,6 @@
 name: 'publish'
 
 on:
-  push:
-    branches:
-      - release
-            - 'app-v*'
   workflow_dispatch:
 
 jobs:
